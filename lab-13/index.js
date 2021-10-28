@@ -19,7 +19,9 @@ const morgan = require("morgan");
 const favicon = require("serve-favicon");
 const session = require("express-session");
 const ejsLayout = require("express-ejs-layouts");
-const { appendFileSync } = require('fs');
+
+// Dependencias
+const r1 = require("./routes/alumno1.js");
 
 // instanciar Express
 const app = express();
@@ -47,7 +49,10 @@ app.use( session( {
 app.use( express.static( __dirname + "/public"));
 
 // La aplicacion debe estar en ...
-// Van las rutas
+// Esta parte la hizo el alumno 1
+app.use("/login", r1);
+// Esta parte la hizo el alumno 2
+
 
 
 // Instanciar el server
