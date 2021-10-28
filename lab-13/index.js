@@ -22,6 +22,7 @@ const ejsLayout = require("express-ejs-layouts");
 
 // Dependencias
 const r1 = require("./routes/alumno1.js");
+const r2 = require("./routes/alumno2.js");
 
 // instanciar Express
 const app = express();
@@ -52,6 +53,7 @@ app.use( express.static( __dirname + "/public"));
 // Esta parte la hizo el alumno 1
 app.use("/login", r1);
 // Esta parte la hizo el alumno 2
+app.use("/plantillas",r2);
 
 
 
